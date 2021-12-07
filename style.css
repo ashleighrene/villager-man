@@ -1,0 +1,72 @@
+body {
+	background-color: #eae4e9;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.page-main {
+	flex-grow: 1;
+}
+
+h1 {
+	text-align: center;
+}
+
+/* <!-- I used class notes for reference on much of my modal scaffolding and styling
+https://git.generalassemb.ly/SEIR-1115/modals-intro --> */
+
+#modal {
+	background-color: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+	display: none;
+}
+
+h2 {
+	padding-bottom: 15px;
+}
+
+#modal-textbox {
+	font-family: 'epilogue', sans-serif;
+	font-weight: 300;
+	background-color: #fff1e6;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+	margin: 150px auto;
+	padding: 2%;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	line-height: 120%;
+}
+
+.modal-p {
+	padding: 8px;
+}
+
+#modal-footer {
+	text-align: right;
+}
+
+.modal-buttons {
+	padding: 14px 18px;
+	background-color: #fde2e4;
+	border-radius: 3px;
+	color: black;
+	font-family: 'Arial';
+	cursor: grab;
+}
+
+#openModal {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+}

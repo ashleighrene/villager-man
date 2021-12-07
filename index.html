@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400&family=Quicksand:wght@400;500&display=swap"
+        rel="stylesheet">
+    <title>Villager Man!</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+    <h1>Villager Man</h1>
+    </header>
+    <main>
+
+<!-- I used class notes for reference on much of my modal scaffolding and styling
+https://git.generalassemb.ly/SEIR-1115/modals-intro -->
+
+<button class="modal-buttons" id="openModal">How To Play</button>
+<div id="modal">
+    <div id="modal-textbox">
+        
+            <h2>How to Play Villager Man</h2>
+            <p class="modal-p">Try to keep as many villagers on your island as you can!
+                Player One will pick a word by typing in what they would like Player Two to guess and then click 'done'.</p>
+            <p class="modal-p">Player Two will get to guess the word by typing in one   letter at a time and waiting to see if the letter is in the hidden word.</p>
+            <p class="modal-p">If the selected letter is in the word, it will be revealed in the word box. If it is not in the hidden word, it will go into the trash heap and a villager will leave the island.</p>
+            <p class="modal-p">If all villagers leave, Player Two loses the game.  If the word is guessed with at least one villager remaining, Player One loses the game.</p>
+            <div id="modal-footer">
+            <button class="modal-buttons" id="close" href="#">Close</button>
+            </div>
+    </div>
+</div>
+
+
+    </main>
+</div>
+    
+    <script src = "script.js"></script>
+</body>
+</html>
