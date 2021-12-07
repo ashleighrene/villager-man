@@ -30,4 +30,4 @@ A browser-based Spaceman game (with an Animal Crossing twist) coded in JavaScrip
 
 #### Wireframe
 
-![Villager Man Wireframe Image](assets/Villager-Man-Wireframe.jpg)
+![Villager Man Wireframe Image](https://github.com/ashleighrene/villager-man/blob/main/Villager-Man-Wireframe.jpg)
