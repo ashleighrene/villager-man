@@ -1,11 +1,12 @@
 body {
-	background-color: #eae4e9;
+	background-color: white;
 }
 
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	flex-wrap: wrap;
 }
 
 .page-main {
@@ -13,7 +14,13 @@ body {
 }
 
 h1 {
+	font-family: quicksand, sans-serif;
+	font-size: 32px;
+	font-weight: 500;
 	text-align: center;
+	margin: 0px auto;
+	display: block;
+	padding: 20px;
 }
 
 /* <!-- I used class notes for reference on much of my modal scaffolding and styling
@@ -32,7 +39,10 @@ https://git.generalassemb.ly/SEIR-1115/modals-intro --> */
 }
 
 h2 {
-	padding-bottom: 15px;
+	text-align: center;
+	margin: 0px auto;
+	display: block;
+	padding-top: 10px;
 }
 
 #modal-textbox {
@@ -66,7 +76,68 @@ h2 {
 }
 
 #openModal {
-	position: fixed;
+	position: absolute;
 	top: 10px;
 	left: 10px;
+}
+
+#village-square {
+	border: blue solid 2px;
+	margin: 10px;
+	display: flex;
+	width: 98%;
+	align-items: flex-start;
+	flex-flow: row wrap;
+}
+
+.villagerTop {
+	border: yellow solid 2px;
+	background-position: center;
+	flex-grow: 1;
+	flex-basis: 17%;
+	width: 100px;
+	height: 100px;
+	justify-content: space-between;
+	flex-direction: row;
+}
+.villagerBottom {
+	border: orange solid 2px;
+	background-position: center;
+	flex-grow: 1;
+	flex-basis: 17%;
+	height: 100px;
+	width: 100px;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+#hidden-word {
+	border: green solid 2px;
+	margin: 10px;
+	display: flex;
+	width: 98%;
+	height: 190px;
+	align-items: flex-start;
+	flex-flow: row wrap;
+}
+
+#trash {
+	border: red solid 2px;
+	display: flex;
+	width: 98%;
+	height: 180px;
+	margin: 10px;
+}
+
+#reset-button {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	padding: 14px 18px;
+	margin: 10px;
+	background-color: #fde2e4;
+	border-radius: 3px;
+	color: black;
+	font-family: 'Arial';
+	cursor: grab;
 }
