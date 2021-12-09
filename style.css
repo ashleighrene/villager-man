@@ -83,7 +83,6 @@ h2 {
 }
 
 #village-square {
-	border: blue solid 2px;
 	margin: 10px;
 	display: flex;
 	width: 98%;
@@ -92,7 +91,6 @@ h2 {
 }
 
 .villagerTop {
-	border: yellow solid 2px;
 	background-position: center;
 	flex-grow: 1;
 	flex-basis: 17%;
@@ -102,7 +100,6 @@ h2 {
 	flex-direction: row;
 }
 .villagerBottom {
-	border: orange solid 2px;
 	background-position: center;
 	flex-grow: 1;
 	flex-basis: 17%;
@@ -112,32 +109,91 @@ h2 {
 	flex-direction: row;
 }
 
-#guessInputBox {
-	border: 2px solid brown;
-	margin: 10px;
-	display: flex;
-	width: 50%;
-	height: 20px;
-	align-items: flex-start;
-	flex-flow: row wrap;
+#blanche {
+	background-position: center;
+	background-image: url('/assets/images/blanche100.jpeg');
+	background-repeat: no-repeat;
+}
+#chops {
+	background-position: center;
+	background-image: url('/assets/images/chops100.jpeg');
+	background-repeat: no-repeat;
+}
+#coco {
+	background-position: center;
+	background-image: url('/assets/images/coco100.jpeg');
+	background-repeat: no-repeat;
+}
+#eunice {
+	background-position: center;
+	background-image: url('/assets/images/eunice100.jpeg');
+	background-repeat: no-repeat;
+}
+#hopper {
+	background-position: center;
+	background-image: url('/assets/images/hopper100.jpeg');
+	background-repeat: no-repeat;
+}
+#rolf {
+	background-position: center;
+	background-image: url('/assets/images/rolf100.jpeg');
+	background-repeat: no-repeat;
+}
+#spike {
+	background-position: center;
+	background-image: url('/assets/images/spike100.jpeg');
+	background-repeat: no-repeat;
+}
+#sylvana {
+	background-position: center;
+	background-image: url('/assets/images/sylvana100.jpeg');
+	background-repeat: no-repeat;
+}
+#vivian {
+	background-position: center;
+	background-image: url('/assets/images/vivian100.jpeg');
+	background-repeat: no-repeat;
+}
+#zucker {
+	background-position: center;
+	background-image: url('/assets/images/zucker100.jpeg');
+	background-repeat: no-repeat;
+}
+
+#inputBoxDiv {
+	padding-top: 6px;
+}
+
+label {
+	width: 180px;
+	clear: left;
+	text-align: right;
+	padding-right: 10px;
+}
+
+label,
+input {
+	float: left;
 }
 
 #hiddenWord {
-	border: 2px solid green;
 	margin: 10px;
 	display: flex;
-	width: 98%;
+	width: 97%;
 	height: 160px;
 	align-items: flex-start;
 	flex-flow: row wrap;
+	padding: 5px;
+	font-size: 30px;
 }
 
 #trash {
-	border: 2px solid red;
 	display: flex;
-	width: 98%;
+	width: 97%;
 	height: 150px;
 	margin: 10px;
+	padding: 5px;
+	font-size: 30px;
 }
 
 #resetBtn {
