@@ -22,7 +22,7 @@ let rightAnswer = [];
 let wrongAnswer = [];
 let letterBoard = document.querySelector('#hiddenWord');
 let trashHeap = document.querySelector('#trash');
-let inputField = document.querySelector('#guessInputBox');
+let inputField = document.querySelector('#guessInputBox input');
 let resetButton = document.querySelector('#resetBtn');
 let villagerArray = document.querySelectorAll('.villagerTop.villagerBottom');
 let villageSquare = document.querySelector('#village-square');
@@ -45,8 +45,6 @@ let wordBank = [
 	'scuba',
 	'gyroid',
 ];
-
-
 
 //________________________________________________________________
 
