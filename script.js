@@ -1,6 +1,4 @@
 // Modal
-// I used class notes for reference on much of my modal     scaffolding and styling
-// https://git.generalassemb.ly/SEIR-1115/modals-intro
 
 const openBtn = document.querySelector('#openModal');
 const modal = document.querySelector('#modal');
@@ -16,18 +14,18 @@ const closeModal = () => {
 openBtn.addEventListener('click', openModal);
 close.addEventListener('click', closeModal);
 
-// ______________________________________________
+// _______________________________________________________________
 
+//Variables
+
+let rightAnswer = [];
+let wrongAnswer = [];
 let letterBoard = document.querySelector('#hiddenWord');
 let trashHeap = document.querySelector('#trash');
-
-// Array established to hold incorrect letters (trashHeap)
-let wrongAnswer = [];
-
-//Array of villagers.
+let inputField = document.querySelector('#guessInputBox');
+let resetButton = document.querySelector('#resetBtn');
 let villagerArray = document.querySelectorAll('.villagerTop.villagerBottom');
-
-// Array of words with random selection to start. They should all be lower case.
+let villageSquare = document.querySelector('#village-square');
 let wordBank = [
 	'nook',
 	'island',
@@ -48,15 +46,27 @@ let wordBank = [
 	'gyroid',
 ];
 
-// Function to randomly choose word from wordBank
-let answerWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 
+
+//________________________________________________________________
+
+// Event Listeners
+
+resetBtn.addEventListener('click', clearBoard);
+inputField.addEventListener('keydown', addLetter);
+
+//________________________________________________________________
+
+// Functions
+
+let answerWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 // Show answer word in console only
 console.log(answerWord);
 
-// Player Guesses
-let inputField = document.querySelector('#guessInputBox');
-inputField.addEventListener('keydown', addLetter);
+for (let i = 0; i < answerWord.length; i++) {
+	rightAnswer[i] = '_';
+}
+
 function addLetter(event) {
 	if (event.keyCode >= 65 && event.keyCode <= 91) {
 		let letter = event.key.toLowerCase();
@@ -85,24 +95,12 @@ function addLetter(event) {
 			wrongAnswer.push(letter);
 			trashHeap.innerText = wrongAnswer.join(' ');
 			// Remove villager from board
-			// Not working - won't console.log
-
-			for (let i = villagerArray.length - 1; i >= 0; i--) {
-				villagerArray.remove(0);
-			}
+			villageSquare.removeChild(
+				villageSquare.childNodes[wrongAnswer.length - 1]
+			);
 		}
 	}
 }
-
-//Show lines for each letter in word after first letter guessed
-let rightAnswer = [];
-for (let i = 0; i < answerWord.length; i++) {
-	rightAnswer[i] = '_';
-}
-
-// Clear letterBoard, trashHeap, and inputField for new try
-let resetButton = document.querySelector('#resetBtn');
-resetBtn.addEventListener('click', clearBoard);
 
 function clearBoard() {
 	rightAnswer = [];
@@ -118,17 +116,16 @@ function clearBoard() {
 	trashHeap.innerText = wrongAnswer.join(' ');
 }
 
-// If letter is not found in word, letter will go to trash heap and one villager will be removed
-// Check to see if word is complete (checkWin)
-// Check to see if villager array is empty (checkLoss)
-// Repeat Player actions until checkWin or checkLoss becomes true
-// When checkWin is true, show win screen and reminder of reset button to play again
-// When checkLoss is true, show loss screen and reminder of reset button to play again
+//________________________________________________________________
+//Resources
 
 // Reference for keyCode
 // Utilized https://en.wikipedia.org/wiki/List_of_Unicode_characters#Basic_Latin
 
 //Reference for addLetter function
 //https://stackoverflow.com/questions/58469995/javascript-trying-to-allow-a-key-press-only-once-in-hangman-game-when-it-is-de
+
+// I used class notes for reference on much of my modal     scaffolding and styling
+// https://git.generalassemb.ly/SEIR-1115/modals-intro
 
 //All villager images are owned by Nintendo, I do not claim any credit for them.
