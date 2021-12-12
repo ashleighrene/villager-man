@@ -28,10 +28,19 @@ https://git.generalassemb.ly/SEIR-1115/modals-intro -->
         
             <h2>How to Play Villager Man</h2>
             <p class="modal-p">Try to keep as many villagers on your island as you can!
-                Player One will pick a word by typing in what they would like Player Two to guess and then click 'done'.</p>
-            <p class="modal-p">Player Two will get to guess the word by typing in one   letter at a time and waiting to see if the letter is in the hidden word.</p>
+                </p>
+
+            <p class="modal-p">
+                The computer will pick a random word and you get to try and guess it.
+            </p>
+
+            <p class="modal-p">
+                Type in a letter that you think is in the word.
+            </p>
+            
             <p class="modal-p">If the selected letter is in the word, it will be revealed in the word box. If it is not in the hidden word, it will go into the trash heap and a villager will leave the island.</p>
-            <p class="modal-p">If all villagers leave, Player Two loses the game.  If the word is guessed with at least one villager remaining, Player One loses the game.</p>
+
+            <p class="modal-p">If all villagers leave, then the game is over and you lose.  If you guess the word and at least one villager is still on your island, you win!</p>
             <div id="modal-footer">
             <button class="modal-buttons" id="close" href="#">Close</button>
             </div>
@@ -39,9 +48,43 @@ https://git.generalassemb.ly/SEIR-1115/modals-intro -->
 </div>
 
 
-    </main>
+
+<!-- Centered main space where Villagers are placed and disappear -->
+<div id="village-square">
+    <div class="villagerTop" id='blanche'></div>
+    <div class="villagerTop" id='chops'></div>
+    <div class="villagerTop" id='coco'></div>
+    <div class="villagerTop" id='eunice'></div>
+    <div class="villagerTop" id='hopper'></div>
+    <div class="villagerBottom" id='rolf'></div>
+    <div class="villagerBottom" id='spike'></div>
+    <div class="villagerBottom" id='sylvana'></div>
+    <div class="villagerBottom" id='vivian'></div>
+    <div class="villagerBottom" id='zucker'></div>  
 </div>
-    
+
+<div id="inputBoxDiv">
+<label for="guessInputBox">Type Letter Here:</label>
+<form id="guessInputBox">
+     <input type="text">
+</form>
+</div>
+
+<!-- Space where letters are placed if correct -->
+<div id="hiddenWord">
+</div>
+
+<!-- Space where letters are placed if incorrect -->
+
+<div id="trash">
+</div>
+
+
+<button id="resetBtn">Reset</button>
+
+    </main>   
+</div>
+   
     <script src = "script.js"></script>
 </body>
 </html>

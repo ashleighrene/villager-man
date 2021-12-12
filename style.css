@@ -1,11 +1,13 @@
 body {
-	background-color: #eae4e9;
+	background-color: white;
+	font-family: 'epilogue', sans-serif;
 }
 
 .wrapper {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+	flex-wrap: wrap;
 }
 
 .page-main {
@@ -13,7 +15,13 @@ body {
 }
 
 h1 {
+	font-family: quicksand, sans-serif;
+	font-size: 32px;
+	font-weight: 500;
 	text-align: center;
+	margin: 0px auto;
+	display: block;
+	padding: 20px;
 }
 
 /* <!-- I used class notes for reference on much of my modal scaffolding and styling
@@ -32,7 +40,10 @@ https://git.generalassemb.ly/SEIR-1115/modals-intro --> */
 }
 
 h2 {
-	padding-bottom: 15px;
+	text-align: center;
+	margin: 0px auto;
+	display: block;
+	padding-top: 10px;
 }
 
 #modal-textbox {
@@ -66,7 +77,138 @@ h2 {
 }
 
 #openModal {
-	position: fixed;
+	position: absolute;
 	top: 10px;
 	left: 10px;
+}
+
+#village-square {
+	margin: 10px;
+	display: flex;
+	width: 98%;
+	align-items: flex-start;
+	flex-flow: row wrap;
+}
+
+.villagerTop {
+	background-position: center;
+	flex-grow: 1;
+	flex-basis: 17%;
+	width: 100px;
+	height: 100px;
+	justify-content: space-between;
+	flex-direction: row;
+}
+.villagerBottom {
+	background-position: center;
+	flex-grow: 1;
+	flex-basis: 17%;
+	height: 100px;
+	width: 100px;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+#blanche {
+	background-position: center;
+	background-image: url('/assets/images/blanche100.jpeg');
+	background-repeat: no-repeat;
+}
+#chops {
+	background-position: center;
+	background-image: url('/assets/images/chops100.jpeg');
+	background-repeat: no-repeat;
+}
+#coco {
+	background-position: center;
+	background-image: url('/assets/images/coco100.jpeg');
+	background-repeat: no-repeat;
+}
+#eunice {
+	background-position: center;
+	background-image: url('/assets/images/eunice100.jpeg');
+	background-repeat: no-repeat;
+}
+#hopper {
+	background-position: center;
+	background-image: url('/assets/images/hopper100.jpeg');
+	background-repeat: no-repeat;
+}
+#rolf {
+	background-position: center;
+	background-image: url('/assets/images/rolf100.jpeg');
+	background-repeat: no-repeat;
+}
+#spike {
+	background-position: center;
+	background-image: url('/assets/images/spike100.jpeg');
+	background-repeat: no-repeat;
+}
+#sylvana {
+	background-position: center;
+	background-image: url('/assets/images/sylvana100.jpeg');
+	background-repeat: no-repeat;
+}
+#vivian {
+	background-position: center;
+	background-image: url('/assets/images/vivian100.jpeg');
+	background-repeat: no-repeat;
+}
+#zucker {
+	background-position: center;
+	background-image: url('/assets/images/zucker100.jpeg');
+	background-repeat: no-repeat;
+}
+
+#inputBoxDiv {
+	padding-top: 6px;
+}
+
+label {
+	width: 180px;
+	clear: left;
+	text-align: right;
+	padding-right: 10px;
+}
+
+label,
+input {
+	float: left;
+	font-size: 20px;
+	height: 20px;
+}
+
+#hiddenWord {
+	margin: 10px;
+	display: flex;
+	width: 97%;
+	height: 150px;
+	align-items: flex-start;
+	flex-flow: row wrap;
+	padding-top: 50px;
+	font-size: 40px;
+	justify-content: center;
+}
+
+#trash {
+	display: flex;
+	width: 97%;
+	height: 150px;
+	margin: 10px;
+	padding-top: 50px;
+	font-size: 30px;
+	justify-content: center;
+}
+
+#resetBtn {
+	position: static;
+	bottom: 10px;
+	left: 10px;
+	padding: 14px 18px;
+	margin: 10px;
+	background-color: #fde2e4;
+	border-radius: 3px;
+	color: black;
+	font-family: 'Arial';
+	cursor: grab;
 }
