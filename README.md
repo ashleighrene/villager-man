@@ -5,8 +5,8 @@
 A browser-based Spaceman game (with an Animal Crossing twist) coded in JavaScript, HTML and CSS.
 
 ## Screenshots
-![Villager Man Screenshots](https://github.com/ashleighrene/villager-man/assets/main-page.jpeg
-![Villager Man Screenshots](https://github.com/ashleighrene/villager-man/assets/main-play.jpeg
+![Villager Man Screenshots](https://github.com/ashleighrene/villager-man/assets/main-page.jpeg)
+![Villager Man Screenshots](https://github.com/ashleighrene/villager-man/assets/main-play.jpeg)
 
 ## Planning Process
 
@@ -35,5 +35,5 @@ A browser-based Spaceman game (with an Animal Crossing twist) coded in JavaScrip
 
 #### Wireframe
 
-![Villager Man Wireframe Image](https://github.com/ashleighrene/villager-man/assets/Villager-Man-Wireframe.jpg
+![Villager Man Wireframe Image](https://github.com/ashleighrene/villager-man/assets/Villager-Man-Wireframe.jpg)
 
