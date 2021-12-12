@@ -174,17 +174,20 @@ label {
 label,
 input {
 	float: left;
+	font-size: 20px;
+	height: 20px;
 }
 
 #hiddenWord {
 	margin: 10px;
 	display: flex;
 	width: 97%;
-	height: 160px;
+	height: 150px;
 	align-items: flex-start;
 	flex-flow: row wrap;
-	padding: 5px;
-	font-size: 30px;
+	padding-top: 50px;
+	font-size: 40px;
+	justify-content: center;
 }
 
 #trash {
@@ -192,8 +195,9 @@ input {
 	width: 97%;
 	height: 150px;
 	margin: 10px;
-	padding: 5px;
+	padding-top: 50px;
 	font-size: 30px;
+	justify-content: center;
 }
 
 #resetBtn {

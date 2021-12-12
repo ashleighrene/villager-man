@@ -103,7 +103,7 @@ function addLetter(event) {
 function clearBoard() {
 	rightAnswer = [];
 	wrongAnswer = [];
-	inputField.value = ' '; //Will not clear
+	inputField.value = ' ';
 
 	//restore lines for new try
 	for (let i = 0; i < answerWord.length; i++) {
