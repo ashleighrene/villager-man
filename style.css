@@ -111,52 +111,52 @@ h2 {
 
 #blanche {
 	background-position: center;
-	background-image: url('/assets/images/blanche100.JPEG');
+	background-image: url('./assets/images/blanche100.JPEG');
 	background-repeat: no-repeat;
 }
 #chops {
 	background-position: center;
-	background-image: url('/assets/images/chops100.jpeg');
+	background-image: url('./assets/images/chops100.jpeg');
 	background-repeat: no-repeat;
 }
 #coco {
 	background-position: center;
-	background-image: url('/assets/images/coco100.jpeg');
+	background-image: url('./assets/images/coco100.jpeg');
 	background-repeat: no-repeat;
 }
 #eunice {
 	background-position: center;
-	background-image: url('/assets/images/eunice100.jpeg');
+	background-image: url('./assets/images/eunice100.jpeg');
 	background-repeat: no-repeat;
 }
 #hopper {
 	background-position: center;
-	background-image: url('/assets/images/hopper100.jpeg');
+	background-image: url('./assets/images/hopper100.jpeg');
 	background-repeat: no-repeat;
 }
 #rolf {
 	background-position: center;
-	background-image: url('/assets/images/rolf100.jpeg');
+	background-image: url('./assets/images/rolf100.jpeg');
 	background-repeat: no-repeat;
 }
 #spike {
 	background-position: center;
-	background-image: url('/assets/images/spike100.jpeg');
+	background-image: url('./assets/images/spike100.jpeg');
 	background-repeat: no-repeat;
 }
 #sylvana {
 	background-position: center;
-	background-image: url('/assets/images/sylvana100.jpeg');
+	background-image: url('./assets/images/sylvana100.jpeg');
 	background-repeat: no-repeat;
 }
 #vivian {
 	background-position: center;
-	background-image: url('/assets/images/vivian100.jpeg');
+	background-image: url('./assets/images/vivian100.jpeg');
 	background-repeat: no-repeat;
 }
 #zucker {
 	background-position: center;
-	background-image: url('/assets/images/zucker100.jpeg');
+	background-image: url('./assets/images/zucker100.jpeg');
 	background-repeat: no-repeat;
 }
 
