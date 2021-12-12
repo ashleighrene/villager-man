@@ -33,6 +33,9 @@ A browser-based Spaceman game (with an Animal Crossing twist) coded in JavaScrip
 - As a user, I want there to be audio that plays if a letter is guessed correctly and when it is not.
 - As a user, I would like there to be style added to the background and letters to make the game more visually appealing.
 
+#### Unsolved problems
+- Villagers do not automatically disappear with incorrect letter guesses.  The 'reset' button must be clicked before a villager will disappear.  I was not able to fix this bug before deployment.  The villagers will be removed after 'reset' button click but not ideal as the incorrect letter field is also cleared.
+
 #### Wireframe
 
 ![Villager Man Wireframe Image](https://github.com/ashleighrene/villager-man/blob/main/assets/Villager-Man-Wireframe.jpg)
