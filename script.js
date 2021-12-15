@@ -18,13 +18,27 @@ close.addEventListener('click', closeModal);
 
 //Variables
 
+const villagers = [
+	'blanche',
+	'chops',
+	'coco',
+	'eunice',
+	'hopper',
+	'rolf',
+	'spike',
+	'sylvana',
+	'vivian',
+	'zucker',
+];
+
 let rightAnswer = [];
 let wrongAnswer = [];
+// let newGame = ;
 let letterBoard = document.querySelector('#hiddenWord');
 let trashHeap = document.querySelector('#trash');
 let inputField = document.querySelector('#guessInputBox input');
+let submitButton = document.querySelector('#submitBtn');
 let resetButton = document.querySelector('#resetBtn');
-let villagerArray = document.querySelectorAll('.villagerTop.villagerBottom');
 let villageSquare = document.querySelector('#village-square');
 let wordBank = [
 	'nook',
@@ -50,20 +64,35 @@ let wordBank = [
 
 // Event Listeners
 
-resetBtn.addEventListener('click', clearBoard);
+resetButton.addEventListener('click', clearBoard);
 inputField.addEventListener('keydown', addLetter);
-
+submitButton.addEventListener('click', addLetter);
 //________________________________________________________________
 
 // Functions
 
+function spawnVillagers(quantity) {
+	for (let i = 0; i < quantity; i++) {
+		let div = document.createElement('div');
+		div.classList.add('villagers');
+		div.style.backgroundImage = `url(./assets/images/${villagers[i]}.png)`;
+		villageSquare.appendChild(div);
+	}
+}
+
+spawnVillagers(villagers.length);
+
+// function submitLetter(event) {
+
+// }
+
 let answerWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-// Show answer word in console only
-console.log(answerWord);
 
 for (let i = 0; i < answerWord.length; i++) {
 	rightAnswer[i] = '_';
 }
+// Show answer word in console only
+console.log(answerWord);
 
 function addLetter(event) {
 	if (event.keyCode >= 65 && event.keyCode <= 91) {
@@ -93,9 +122,7 @@ function addLetter(event) {
 			wrongAnswer.push(letter);
 			trashHeap.innerText = wrongAnswer.join(' ');
 			// Remove villager from board
-			villageSquare.removeChild(
-				villageSquare.childNodes[wrongAnswer.length - 1]
-			);
+			villageSquare.removeChild(villageSquare.childNodes[3]);
 		}
 	}
 }
