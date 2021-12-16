@@ -31,15 +31,16 @@ const villagers = [
 	'zucker',
 ];
 
+let indices = [];
 let rightAnswer = [];
 let wrongAnswer = [];
-// let newGame = ;
 let letterBoard = document.querySelector('#hiddenWord');
 let trashHeap = document.querySelector('#trash');
 let inputField = document.querySelector('#guessInputBox input');
 let submitButton = document.querySelector('#submitBtn');
 let resetButton = document.querySelector('#resetBtn');
 let villageSquare = document.querySelector('#village-square');
+
 let wordBank = [
 	'nook',
 	'island',
@@ -66,11 +67,20 @@ let wordBank = [
 
 resetButton.addEventListener('click', clearBoard);
 inputField.addEventListener('keydown', addLetter);
-submitButton.addEventListener('click', addLetter);
+
 //________________________________________________________________
 
 // Functions
 
+function checkLoss() {
+	if (villageSquare.childNodes.length === 1) {
+		window.alert(
+			"I'm sorry, all of the villagers have left.  Please select 'New Game' to try again."
+		);
+	}
+}
+
+// Assign 10 villagers to the board
 function spawnVillagers(quantity) {
 	for (let i = 0; i < quantity; i++) {
 		let div = document.createElement('div');
@@ -79,15 +89,12 @@ function spawnVillagers(quantity) {
 		villageSquare.appendChild(div);
 	}
 }
-
 spawnVillagers(villagers.length);
 
-// function submitLetter(event) {
-
-// }
-
+// Generate random word to guess
 let answerWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 
+//
 for (let i = 0; i < answerWord.length; i++) {
 	rightAnswer[i] = '_';
 }
@@ -122,9 +129,14 @@ function addLetter(event) {
 			wrongAnswer.push(letter);
 			trashHeap.innerText = wrongAnswer.join(' ');
 			// Remove villager from board
-			villageSquare.removeChild(villageSquare.childNodes[3]);
+
+			villageSquare.removeChild(villageSquare.childNodes[1]);
+			checkLoss();
 		}
 	}
+	setTimeout(() => {
+		inputField.value = '';
+	}, 500);
 }
 
 function clearBoard() {
@@ -139,6 +151,8 @@ function clearBoard() {
 	//restore removal of commas for new try
 	letterBoard.innerText = rightAnswer.join(' ');
 	trashHeap.innerText = wrongAnswer.join(' ');
+	// Add another 10 villagers to the board for new game
+	spawnVillagers(villagers.length);
 }
 
 //________________________________________________________________
@@ -152,5 +166,7 @@ function clearBoard() {
 
 // I used class notes for reference on much of my modal     scaffolding and styling
 // https://git.generalassemb.ly/SEIR-1115/modals-intro
+
+// Favicon palm tree used through Creative Commons though original artist is https://www.favicon.cc/?action=icon_list&user_id=4717
 
 //All villager images are owned by Nintendo, I do not claim any credit for them.
