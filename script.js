@@ -14,22 +14,27 @@ const closeModal = () => {
 openBtn.addEventListener('click', openModal);
 close.addEventListener('click', closeModal);
 
+// Hint Modal
+
+const openHintBtn = document.querySelector('#openHint');
+const hint = document.querySelector('#hint');
+const closeHint = document.querySelector('#closeHint');
+
+const openHint = () => {
+	hint.style.display = 'block';
+};
+const closeHintModal = () => {
+	hint.style.display = 'none';
+};
+
+openHintBtn.addEventListener('click', openHint);
+closeHint.addEventListener('click', closeHintModal);
+
 // _______________________________________________________________
 
 //Variables
 
-const villagers = [
-	'blanche',
-	'chops',
-	'coco',
-	'eunice',
-	'hopper',
-	'rolf',
-	'spike',
-	'sylvana',
-	'vivian',
-	'zucker',
-];
+const villagers = [11, 37, 42, 45, 67, 72, 92, 102, 118];
 
 let indices = [];
 let rightAnswer = [];
@@ -61,7 +66,7 @@ let wordBank = [
 	'gyroid',
 ];
 
-//________________________________________________________________
+// ______________________________________________________________
 
 // Event Listeners
 
@@ -75,7 +80,7 @@ inputField.addEventListener('keydown', addLetter);
 function checkLoss() {
 	if (villageSquare.childNodes.length === 1) {
 		window.alert(
-			"I'm sorry, all of the villagers have left.  Please select 'New Game' to try again."
+			"I'm sorry, all of the villagers have left.  Please select 'Reset' to try again."
 		);
 	}
 }
@@ -85,7 +90,7 @@ function spawnVillagers(quantity) {
 	for (let i = 0; i < quantity; i++) {
 		let div = document.createElement('div');
 		div.classList.add('villagers');
-		div.style.backgroundImage = `url(./assets/images/${villagers[i]}.png)`;
+		div.style.backgroundImage = `url(../../assets/images/villagers/${villagers[i]}.png`;
 		villageSquare.appendChild(div);
 	}
 }

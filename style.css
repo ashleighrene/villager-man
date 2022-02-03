@@ -1,9 +1,6 @@
 body {
 	font-family: 'epilogue', sans-serif;
-	background-image: url(./assets/images/swimmingly.large.jpg);
-	/* background image property of Nintendo Life */
-	background-size: cover;
-	background-repeat: no-repeat;
+	overflow: scroll;
 }
 
 .wrapper {
@@ -52,7 +49,7 @@ h2 {
 #modal-textbox {
 	font-family: 'epilogue', sans-serif;
 	font-weight: 300;
-	background-color: #fff1e6;
+	background-color: #f8f7f8;
 	height: 350px;
 	width: 550px;
 	border-radius: 2px;
@@ -63,7 +60,7 @@ h2 {
 }
 
 .modal-p {
-	padding: 8px;
+	padding: 7px;
 }
 
 #modal-footer {
@@ -72,7 +69,8 @@ h2 {
 
 .modal-buttons {
 	padding: 10px 15px;
-	background-color: #faedcd;
+
+	background-color: #cdecfa;
 	border-radius: 3px;
 	color: black;
 	font-family: 'Arial';
@@ -85,8 +83,57 @@ h2 {
 	left: 10px;
 }
 
+#hint {
+	background-color: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+	display: none;
+}
+
+#hint-textbox {
+	font-family: 'epilogue', sans-serif;
+	font-weight: 300;
+	background-color: #f8f7f8;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+	margin: 150px auto;
+	padding: 2%;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	line-height: 120%;
+}
+
+.hint-p {
+	padding: 7px;
+}
+
+#hint-footer {
+	text-align: right;
+}
+
+.hint-buttons {
+	padding: 10px 15px;
+	margin-top: 250px;
+	background-color: #cdecfa;
+	border-radius: 3px;
+	color: black;
+	font-family: 'Arial';
+	cursor: grab;
+}
+
+#openhint {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
 #village-square {
-	padding: 30px;
+	padding: 10px;
 	margin: 10px;
 	display: flex;
 	width: 98%;
@@ -99,8 +146,8 @@ h2 {
 	background-position: center;
 	flex-grow: 1;
 	flex-basis: 17%;
-	height: 100px;
-	width: 100px;
+	height: 200px;
+	width: 200px;
 	justify-content: space-between;
 	flex-direction: row;
 }
@@ -111,6 +158,7 @@ h2 {
 
 label {
 	width: 200px;
+
 	clear: left;
 	text-align: right;
 	padding: 10px;
@@ -153,7 +201,7 @@ input {
 	position: static;
 	padding: 10px 15px;
 	margin: 10px;
-	background-color: #faedcd;
+	background-color: #cdecfa;
 	border-radius: 3px;
 	color: black;
 	font-family: 'Arial';

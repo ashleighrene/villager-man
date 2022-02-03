@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,79 +9,122 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400&family=Quicksand:wght@400;500&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400&family=Quicksand:wght@400;500&display=swap"
         rel="stylesheet">
     <title>Villager Man!</title>
-    <link href="./assets/images/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
-<body>
-<div class="wrapper">
-    <header>
-    <h1>Villager Man</h1>
-    </header>
-    <main>
 
-<!-- I used class notes for reference on much of my modal scaffolding and styling
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Villager Man</h1>
+        </header>
+        <main>
+
+            <!-- I used class notes for reference on much of my modal scaffolding and styling
 https://git.generalassemb.ly/SEIR-1115/modals-intro -->
 
-<button class="modal-buttons" id="openModal">How To Play</button>
-<div id="modal">
-    <div id="modal-textbox">
-        
-            <h2>How to Play Villager Man</h2>
-            <p class="modal-p">Try to keep as many villagers on your island as you can!
-                </p>
+            <button class="modal-buttons" id="openModal">How To Play</button>
+            <div id="modal">
+                <div id="modal-textbox">
 
-            <p class="modal-p">
-                The computer will pick a random word and you get to try and guess it.
-            </p>
+                    <h2>How to Play Villager Man</h2>
+                    <p class="modal-p">Try to keep as many villagers on your island as you can!
+                    </p>
 
-            <p class="modal-p">
-                Type in a letter that you think is in the word.
-            </p>
-            
-            <p class="modal-p">If the selected letter is in the word, it will be revealed in the word box. If it is not in the hidden word, it will go into the trash heap and a villager will leave the island.</p>
+                    <p class="modal-p">
+                        The computer will pick a random word and you get to try and guess it.
+                    </p>
 
-            <p class="modal-p">If all villagers leave, then the game is over and you lose.  If you guess the word and at least one villager is still on your island, you win!</p>
-            <div id="modal-footer">
-            <button class="modal-buttons" id="close">Close</button>
+                    <p class="modal-p">
+                        Type in a letter that you think is in the word.
+                    </p>
+
+                    <p class="modal-p">If the selected letter is in the word, it will be revealed in the word box. If it
+                        is not in the hidden word, it will go into the trash heap and a villager will leave the island.
+                    </p>
+
+                    <p class="modal-p">If all villagers leave, then the game is over and you lose. If you guess the word
+                        and at least one villager is still on your island, you win!</p>
+
+                        <p class="modal-p">Try checking the Word List button if you're stuck on what words are available to guess.</p>
+                    <div id="modal-footer">
+                        <button class="modal-buttons" id="close" href="#">Close</button>
+                    </div>
+                </div>
             </div>
+
+
+
+            <!-- Centered main space where Villagers are placed and disappear -->
+            <div id="village-square">
+                <div class="villager" id='11'></div>
+                <div class="villager" id='37'></div>
+                <div class="villager" id='42'></div>
+                <div class="villager" id='45'></div>
+                <div class="villager" id='67'></div>
+                <div class="villager" id='72'></div>
+                <div class="villager" id='92'></div>
+                <div class="villager" id='102'></div>
+                <div class="villager" id='118'></div>
+                
+            </div>
+
+            <div id="inputBoxDiv">
+                <label for="guessInputBox">Type Letter Here:</label>
+                <form id="guessInputBox">
+                    <input type="text">
+                </form>
+            </div>
+
+            <!-- Space where letters are placed if correct -->
+            <div id="hiddenWord">
+            </div>
+
+            <!-- Space where letters are placed if incorrect -->
+
+            <div id="trash">
+            </div>
+
+
+            <button id="resetBtn">Reset</button>
+
+
+    <!-- Hint Button-->
+            <button class="hint-buttons" id="openHint">Word List</button>
+            <div id="hint">
+                <div id="hint-textbox">           
+                    <br class="hint-p">
+                    nook,
+                    island,
+                    fishing,
+                    build,
+                    craft,
+                    coffee,
+                    nintendo,
+                    seagull,
+                    villagers,
+                    neighbors,
+                    fireworks,
+                    hammock,
+                    cooking,
+                    baking,
+                    gifts,
+                    scuba,
+                    gyroid</p>
+                    <div id="hint-footer">
+                        <button class="hint-buttons" id="closeHint" href="#">Close</button>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
     </div>
-</div>
 
-<!-- Centered main space where Villagers are placed and disappear -->
-<div id="village-square">
-</div>
-
-<!-- Letter Input with Submit Button -->
-
-
-
-<div id="inputBoxDiv">
-<label for="guessInputBox">Type Letter Here:</label>
-<form id="guessInputBox">
-     <input type="text" maxlength="1">
-
-</form>
-</div>
-
-
-
-<!-- Space where letters are placed if correct -->
-<div id="hiddenWord">
-</div>
-
-<!-- Space where letters are placed if incorrect -->
-
-<div id="trash">
-</div>
-
-
-<button id="resetBtn">New Game</button>
-
-    </main>   
-</div>
-   
-    <script src = "script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
